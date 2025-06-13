@@ -5,7 +5,7 @@ TARGET = app
 SRC_DIR = src
 
 # תקיית הקבצים המוכללים (headers)
-INC_DIR = ./inc
+INC_DIR =inc
 
 # מקומפלצי לכל קובץ .c תחת src ותקיות המשנה
 SRCS := $(shell find $(SRC_DIR) -name '*.c')
@@ -14,6 +14,8 @@ OBJS := $(SRCS:.c=.o)
 # הקומפיילר והדגלים
 CC = gcc
 CFLAGS = -Wall -Wextra -I$(INC_DIR) -g
+
+
 
 # פקודת ברירת מחדל
 all: $(TARGET)
